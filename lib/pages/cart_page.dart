@@ -15,6 +15,13 @@ class CartPage extends StatelessWidget {
       ),
       drawer: const MyDrawer(),
       backgroundColor: Theme.of(context).colorScheme.background,
+      body: Column(
+        children: [
+          // cart list
+
+          // pay button
+        ],
+      ),
     );
   }
 }
