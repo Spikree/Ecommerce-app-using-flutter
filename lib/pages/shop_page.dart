@@ -26,7 +26,7 @@ class ShopPage extends StatelessWidget {
             )
           ],
         ),
-        drawer: MyDrawer(),
+        drawer: const MyDrawer(),
         backgroundColor: Theme.of(context).colorScheme.background,
         body: ListView(
           children: [

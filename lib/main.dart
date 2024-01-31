@@ -15,6 +15,8 @@ void main() {
   ));
 }
 
+ThemeData backgroundTheme = darkMode;
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: IntroPage(),
-      theme: darkMode,
+      theme: backgroundTheme,
       routes: {
         '/intro_page': (context) => const IntroPage(),
         '/shop_page': (context) => const ShopPage(),

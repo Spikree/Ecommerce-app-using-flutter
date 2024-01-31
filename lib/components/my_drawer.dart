@@ -22,7 +22,7 @@ class MyDrawer extends StatelessWidget {
                 ),
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
 

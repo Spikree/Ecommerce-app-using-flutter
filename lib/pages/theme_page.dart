@@ -6,18 +6,52 @@ class Themes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text(
-            "Themes",
-            style: TextStyle(color: Colors.white),
-          ),
-          backgroundColor: Theme.of(context).colorScheme.background,
+    final ButtonStyle style = ElevatedButton.styleFrom(
+      textStyle: const TextStyle(fontSize: 20),
+    );
+
+    void Themes(String color) {
+      if (color == "white") {
+      } else if (color == "black") {}
+    }
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          "Themes",
+          style: TextStyle(color: Colors.white),
         ),
-        drawer: const MyDrawer(),
-        backgroundColor: Theme.of(context).colorScheme.background,
+      ),
+      drawer: const MyDrawer(),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              ElevatedButton(
+                style: style,
+                onPressed: () {},
+                child: const Text(
+                  "white",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                style: style,
+                onPressed: () {},
+                child: const Text(
+                  "Dark",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
