@@ -38,13 +38,25 @@ class MyDrawer extends StatelessWidget {
 
               // cart tile
               MyListTile(
-                  text: 'My cart',
-                  icon: Icons.shopping_cart,
-                  onTap: () {
-                    Navigator.pop(context);
+                text: 'My cart',
+                icon: Icons.shopping_cart,
+                onTap: () {
+                  Navigator.pop(context);
 
-                    Navigator.pushNamed(context, '/cart_page');
-                  }),
+                  Navigator.pushNamed(context, '/cart_page');
+                },
+              ),
+
+              //Theme tile
+              MyListTile(
+                text: 'Themes',
+                icon: Icons.sunny,
+                onTap: () {
+                  Navigator.pop(context);
+
+                  Navigator.pushNamed(context, '/theme_page');
+                },
+              ),
             ],
           ),
 

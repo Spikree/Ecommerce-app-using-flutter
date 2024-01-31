@@ -6,6 +6,8 @@ import 'package:ecom_app/themes/dark_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'pages/theme_page.dart';
+
 void main() {
   runApp(ChangeNotifierProvider(
     create: (context) => Shop(),
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
         '/intro_page': (context) => const IntroPage(),
         '/shop_page': (context) => const ShopPage(),
         '/cart_page': (context) => const CartPage(),
+        '/theme_page': (context) => const Themes(),
       },
     );
   }
