@@ -1,5 +1,7 @@
 import 'package:ecom_app/components/my_drawer.dart';
+import 'package:ecom_app/models/themeData.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Themes extends StatelessWidget {
   const Themes({super.key});
@@ -10,13 +12,15 @@ class Themes extends StatelessWidget {
       textStyle: const TextStyle(fontSize: 20),
     );
 
-    String color = "white";
+    final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           "Themes",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(
+              color: Theme.of(context).colorScheme.inversePrimary,
+              fontWeight: FontWeight.w500),
         ),
       ),
       drawer: const MyDrawer(),
@@ -30,11 +34,12 @@ class Themes extends StatelessWidget {
               ElevatedButton(
                 style: style,
                 onPressed: () {
-                  color = "white";
+                  themeProvider.setThemeColor("white");
                 },
-                child: const Text(
+                child: Text(
                   "white",
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(
+                      color: Theme.of(context).colorScheme.inversePrimary),
                 ),
               ),
               const SizedBox(
@@ -43,12 +48,11 @@ class Themes extends StatelessWidget {
               ElevatedButton(
                 style: style,
                 onPressed: () {
-                  color = "black";
+                  themeProvider.setThemeColor("black");
                 },
-                child: const Text(
-                  "Dark",
-                  style: TextStyle(color: Colors.white),
-                ),
+                child: Text("Dark",
+                    style: TextStyle(
+                        color: Theme.of(context).colorScheme.inversePrimary)),
               ),
             ],
           ),
