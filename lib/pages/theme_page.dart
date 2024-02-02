@@ -10,10 +10,7 @@ class Themes extends StatelessWidget {
       textStyle: const TextStyle(fontSize: 20),
     );
 
-    void Themes(String color) {
-      if (color == "white") {
-      } else if (color == "black") {}
-    }
+    String color = "white";
 
     return Scaffold(
       appBar: AppBar(
@@ -32,7 +29,9 @@ class Themes extends StatelessWidget {
             children: [
               ElevatedButton(
                 style: style,
-                onPressed: () {},
+                onPressed: () {
+                  color = "white";
+                },
                 child: const Text(
                   "white",
                   style: TextStyle(color: Colors.white),
@@ -43,7 +42,9 @@ class Themes extends StatelessWidget {
               ),
               ElevatedButton(
                 style: style,
-                onPressed: () {},
+                onPressed: () {
+                  color = "black";
+                },
                 child: const Text(
                   "Dark",
                   style: TextStyle(color: Colors.white),
