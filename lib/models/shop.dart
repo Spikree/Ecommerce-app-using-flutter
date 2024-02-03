@@ -10,28 +10,28 @@ class Shop extends ChangeNotifier {
   final List<Product> _shop = [
     //product 1
     Product(
-      name: "Product 1",
+      name: "Glasses",
       price: 99.99,
       description: "Item description more description Rahhh",
-      //imagePath: imagePath,
+      imagePath: 'assets/images/glasses.png',
     ),
     Product(
-      name: "Product 2",
+      name: "Keyboard",
       price: 99.99,
       description: "Item description",
-      //imagePath: imagePath,
+      imagePath: 'assets/images/keyboard.png',
     ),
     Product(
-      name: "Product 3",
+      name: "Shoes",
       price: 99.99,
       description: "Item description",
-      //imagePath: imagePath,
+      imagePath: 'assets/images/shoes.png',
     ),
     Product(
-      name: "Product 4",
+      name: "Watch",
       price: 99.99,
       description: "Item description",
-      //imagePath: imagePath,
+      imagePath: 'assets/images/watch.png',
     ),
   ];
 

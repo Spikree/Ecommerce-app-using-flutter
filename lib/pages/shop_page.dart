@@ -35,6 +35,8 @@ class ShopPage extends StatelessWidget {
             ),
             // shop tile
 
+            // category of products
+
             //shop subtitle
             Center(
               child: Text(

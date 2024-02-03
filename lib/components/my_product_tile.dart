@@ -16,15 +16,15 @@ class MyProductTile extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        content: Padding(
-          padding: const EdgeInsets.only(top: 20.0),
+        content: const Padding(
+          padding: EdgeInsets.only(top: 20.0),
           child: Text("Add this item to your cart?"),
         ),
         actions: [
           // cancle button
           MaterialButton(
             onPressed: () => Navigator.pop(context),
-            child: Text("Cancle"),
+            child: const Text("Cancle"),
           ),
 
           // yes button
@@ -35,7 +35,7 @@ class MyProductTile extends StatelessWidget {
               //add to cart
               context.read<Shop>().addToCart(product);
             },
-            child: Text("yes"),
+            child: const Text("yes"),
           )
         ],
       ),
@@ -69,7 +69,7 @@ class MyProductTile extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12)),
                   width: double.infinity,
                   padding: const EdgeInsets.all(25),
-                  child: const Icon(Icons.favorite),
+                  child: Image.asset(product.imagePath),
                 ),
               ),
 
@@ -80,7 +80,7 @@ class MyProductTile extends StatelessWidget {
               //product name
               Text(
                 product.name,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 ),
@@ -103,7 +103,7 @@ class MyProductTile extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('\$' + product.price.toStringAsFixed(2)),
+              Text('\$${product.price.toStringAsFixed(2)}'),
               Container(
                 decoration: BoxDecoration(
                   color: Theme.of(context).colorScheme.secondary,
@@ -111,7 +111,7 @@ class MyProductTile extends StatelessWidget {
                 ),
                 child: IconButton(
                   onPressed: () => addToCart(context),
-                  icon: Icon(Icons.add),
+                  icon: const Icon(Icons.add),
                 ),
               )
             ],
